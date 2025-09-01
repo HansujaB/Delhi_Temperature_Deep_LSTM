@@ -1,24 +1,60 @@
-Delhi Temperature Prediction using LSTM
-This project uses a Long Short-Term Memory (LSTM) neural network to predict the mean daily temperature in Delhi, India. The model is trained on historical climate data and is designed to forecast the temperature for a single day based on a sequence of the previous 30 days.
+# 🌡️ Delhi Temperature Prediction using LSTM
 
-Project Overview
-The core of this project is a time-series forecasting model built with TensorFlow/Keras. The process involves:
+This project applies a **Long Short-Term Memory (LSTM)** neural network to predict the **mean daily temperature** in Delhi, India.  
+The model learns from **historical climate data** and forecasts the temperature for a given day based on the **previous 30 days**.
 
-Data Loading and Cleaning: Reading daily climate data from a CSV file, handling missing values, and removing outliers.
+---
 
-Feature Scaling: Normalizing the input features (mean temperature, humidity, wind speed, and mean pressure) using MinMaxScaler.
+## 📌 Project Overview
 
-Data Preparation for LSTM: Structuring the data into sequences, where each sequence consists of 30 days of data used to predict the temperature of the 31st day.
+The workflow of this project involves the following steps:
 
-Model Training: A Sequential model with multiple LSTM layers is trained on the prepared data.
+### 🔹 Data Loading & Cleaning
+- Load daily climate data from **CSV**.  
+- Handle **missing values**.  
+- Detect and remove **outliers** for better training.  
 
-Prediction and Evaluation: The trained model is used to make predictions on unseen test data, and its performance is evaluated using metrics like R-squared (R 
-2
- ), Mean Absolute Error (MAE), and Mean Squared Error (MSE).
+### 🔹 Feature Scaling
+- Normalize input features:  
+  - Mean Temperature  
+  - Humidity  
+  - Wind Speed  
+  - Mean Pressure  
+- Scaling done using **MinMaxScaler**.  
 
- Key Findings
-The model can successfully learn patterns from the historical climate data.
+### 🔹 Data Preparation for LSTM
+- Create **sequences of 30 days** of data to predict the **31st day temperature**.  
 
-The use of LSTMs is effective for this type of time-series forecasting problem.
+### 🔹 Model Training
+- Build a **Sequential model** with **stacked LSTM layers** using **TensorFlow/Keras**.  
+- Train the model on **preprocessed time-series data**.  
 
-Data preprocessing, including handling outliers and proper data scaling, is crucial for good model performance.
+### 🔹 Prediction & Evaluation
+- Generate **temperature predictions** on unseen test data.  
+- Evaluate performance using:  
+  - **R-squared (R²)**  
+  - **Mean Absolute Error (MAE)**  
+  - **Mean Squared Error (MSE)**  
+
+---
+
+## 🔑 Key Findings
+- The model can **successfully learn patterns** from Delhi’s historical climate data.  
+- **LSTMs** are well-suited for **time-series forecasting problems** like temperature prediction.  
+- **Preprocessing steps** (handling outliers & scaling) are crucial for achieving better accuracy.  
+
+---
+
+## 🛠️ Tech Stack
+- **Python 3**  
+- **TensorFlow / Keras** (Deep Learning framework)  
+- **NumPy & Pandas** (Data manipulation)  
+- **Matplotlib / Seaborn** (Visualization)  
+- **scikit-learn** (Scaling & metrics)  
+
+---
+
+## 📊 Results
+- The trained LSTM achieved **good performance** in predicting Delhi’s mean temperature.  
+- Model evaluation metrics (**R², MAE, MSE**) show that the network captures **seasonal and short-term trends effectively**.  
+- Visualization of **actual vs predicted values** confirms the model’s predictive capability.  
